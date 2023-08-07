@@ -6,7 +6,6 @@
       {
         "id": "58145d6b35670ce8",
         "type": "tabs",
-        "dimension": 53.3068783068783,
         "children": [
           {
             "id": "a4a09b4ae65c8293",
@@ -14,34 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "原子笔记/git learning.md",
+                "file": "@MOCs/&Task Summary.md",
                 "mode": "source",
                 "backlinks": false,
-                "source": true
+                "source": false
               }
-            },
-            "group": "4b24c4d50b93f1e3"
-          }
-        ]
-      },
-      {
-        "id": "e23b410a586a6b60",
-        "type": "tabs",
-        "dimension": 46.69312169312169,
-        "children": [
-          {
-            "id": "b5cf9d719e87fc75",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "原子笔记/git learning.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": true
-              }
-            },
-            "group": "4b24c4d50b93f1e3"
+            }
           }
         ]
       }
@@ -110,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "原子笔记/git learning.md",
+                "file": "@MOCs/&Task Summary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,42 +133,41 @@
   },
   "active": "a4a09b4ae65c8293",
   "lastOpenFiles": [
-    "SimpRead/46-Python _ os_path_join() method - GeeksforGeeks@annote.md",
-    "原子笔记/use cloud desktop to train offline data.md",
-    "原子笔记/China Mobile VAD Program.md",
-    "原子笔记/科研工作.md",
-    "@MOCs/&Task Summary.md",
-    "原子笔记/linux command learning.md",
     "原子笔记/git learning.md",
-    "附件/Pasted image 20230806174644.png",
-    "附件/Pasted image 20230806174433.png",
-    "附件/Pasted image 20230806174031.png",
-    "原子笔记/obsidian插件media extended的使用.md",
+    "@MOCs/&Task Summary.md",
     "@MOCs/Fragments Summary.md",
+    "原子笔记/Words Summary.md",
+    "原子笔记/讯飞开会.md",
+    "附件/Pasted image 20230808022351.png",
+    "附件/Pasted image 20230808014027.png",
+    "附件/Pasted image 20230808013826.png",
+    "附件/Pasted image 20230808013653.png",
+    "附件/Pasted image 20230808013254.png",
+    "附件/Pasted image 20230808012138.png",
+    "附件/Pasted image 20230808011649.png",
+    "附件/Pasted image 20230808010235.png",
+    "附件/Pasted image 20230808010122.png",
+    "附件/Pasted image 20230808010018.png",
+    "原子笔记/曲根一万托福单词课笔记.md",
+    "原子笔记/托福备考.md",
+    "原子笔记/科研工作.md",
+    "原子笔记/China Mobile VAD Program.md",
+    "原子笔记/use cloud desktop to train offline data.md",
+    "SimpRead/46-Python _ os_path_join() method - GeeksforGeeks@annote.md",
+    "原子笔记/linux command learning.md",
+    "原子笔记/obsidian插件media extended的使用.md",
     "markdown Formatting/Task.md",
     "原子笔记/some thought about working.md",
     "原子笔记/life is strange.md",
     "原子笔记/before the storm.md",
-    "附件/Pasted image 20230804231028.png",
-    "附件/Pasted image 20230804231013.png",
-    "附件/Pasted image 20230804230958.png",
-    "附件/Pasted image 20230804230948.png",
-    "附件/Pasted image 20230804230939.png",
-    "附件/Pasted image 20230804230928.png",
-    "附件/Pasted image 20230804230829.png",
     "原子笔记/use cloud desktop to train online data.md",
     "原子笔记/提供kaldi目前最好的测试结果, 六月底交付.md",
     "原子笔记/readlines error, UnicodeDecodeError.md",
     "原子笔记/A universal VAD based on jointly trained deep neural networks.md",
     "原子笔记/wangUniversalVADBased2015.md",
-    "原子笔记/曲根一万托福单词课笔记.md",
-    "原子笔记/托福备考.md",
     "原子笔记/where is ssh public key and show git configuration.md",
     "原子笔记/use kaldi to segment 12345_wav.md",
     "原子笔记/fatal_unable to access github.md",
-    "原子笔记/macOS Terminal Proxy.md",
-    "模板/Hexo Blog.md",
-    "原子笔记/My BlogImg Github Token.md",
     "附件/kimStatisticalModelbasedVoice1999",
     "附件/sohnStatisticalModelbasedVoice1999",
     "pdfs for ob/bai2019-NSConflict-zkcmpffsw-mac12.5.1.pdf",

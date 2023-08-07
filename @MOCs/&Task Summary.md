@@ -7,6 +7,7 @@
 - [x] [[毕业相关]]
 
 # Sub Thread
+- [ ] [[neovim, lazyvim]]
 - [ ] [[latex学习]]
 - [ ] [[学车相关]]
 

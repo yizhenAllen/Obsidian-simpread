@@ -216,6 +216,7 @@ nothing to commit, working tree clean
 
 ## 分支命令
 `git branch name` 创建分支
+`git branch name position`  在相应位置创建分支, 可以使用相对路径
 `git branch -v` or `git branch`查看分支
 `git checkout brachname` 切换分支
 `git merge brachname` 合并分支
@@ -259,3 +260,229 @@ git remote -v查看别名
 推送/拉取本地库
 `git push 别名/链接 本地库分支`
 git pull 别名 远程库分支
+
+## 巩固加深-网页互动沙盒
+[Learn Git Branching](https://learngitbranching.js.org/?locale=zh_CN&NODEMO=)
+**git checkout -b branchName**创建并切换到新分支
+### merge a branch
+当HEAD指向main, 我们**git merge bugFix**之后, bugFix分支指针还是留在原地的
+![[Pasted image 20230807200129.png]]
+
+如果我们此时checkout到bugFix然后再merge main分支, 则有:
+![[Pasted image 20230807200322.png]]
+![[Pasted image 20230807200325.png]]
+
+### git rebase - 另一种合并操作
+和merge相反, 我们在**待合并的分支上**执行**git rebase main**
+
+或者**git rebase 主节点 分节点**, 挺重要的!
+
+![[Pasted image 20230807200849.png]]
+可以看到, 两个分支的指针**跑到一条线上了**, 注意此时main分支指针不变
+![[Pasted image 20230807200905.png]]
+所以, 我们要**checkout到main分支, 再rebase到bugFix分支**:
+![[Pasted image 20230807201117.png]]
+
+### 移动HEAD指针
+我们通过checkout命令改变**HEAD的指向**, 然后暂存区和工作区会更改为和相应节点提交时的状态一致, 且暂存区清空.
+
+我们也可以checkout某一个commit, 不一定是分支, 这叫分离HEAD状态.
+![[Pasted image 20230807201631.png]]
+
+**分离HEAD状态**
+![[Pasted image 20230807201808.png]]
+![[Pasted image 20230807201802.png]]
+
+使用**commit的版本号**或者**分支名main^^** 来指定某一个版本
+![[Pasted image 20230807202107.png]]
+![[Pasted image 20230807202100.png]]
+
+
+当HEAD指向main分支, main指向**C2节点**时, **git checkout main**和**git checkout HEAD**是一样的, 不会发生任何事
+
+此时**git checkout main^** 和**git checkout HEAD^** 也是一样的, 但是会将HEAD指向**C2的上一个节点**, 也就是**C1**.
+
+也就是说, 如果我们要让**HEAD和main分开地指向C2节点**, 就只能**git checkout C2了**, 此时我们再commit, 会发生HEAD继续往下新增一个节点**C5**, 但是main分支依旧指向C2节点的情况!
+
+![[Pasted image 20230807203128.png]]
+如果不创建新的分支, 这个C5后续将不属于任何分支, 但他存在.(**checkout到C5然后git branch**, 可以直接在C5原地创建一条分支)
+
+git branch创建的分支会**指向HEAD指向的节点**(如果HEAD指向分支A, 那新分支就指向分支A指向的节点)
+
+到目前为止, **移动分支指针的办法只有一个**, 当HEAD指向那个分支, 然后执行commit或者merge等操作
+### 强制移动分支
+实际上我们还可以用**git branch -f branchName 节点位置**
+强制移动分支, **-f参数**必须使用.
+当HEAD指向某分支时, 我们不能直接移动这个分支, 需要先将HEAD checkout到其他分支才可以
+
+注意, 我们**移动HEAD的前后**, 工作区是会**基于目标节点**改变的, 并且暂存区也是空的, 工作区和暂存区和reset --hard的状态一致.
+
+所以如果我们在master上工作到一半还没有提交, 此时我们checkout去其他分支或者节点就要小心了(实际上git也会让我们必须git commit或者git stash之后才可以切换分支), 不然checkout回来的时候将会回到目前基于的基础节点, 你所有追踪了的文件将会丢失!
+### revert & reset
+注意**revert命令**当你的**工作区/暂存区和当前节点保持一致**的时候才可以使用, git会在每一个可能丢失文件的场景禁止/禁止你
+
+你现在在commit2, 并和commit2保持一致, 执行**git revert HEAD**, 将创建一个新的节点commit3, 这个commit3是commit2的逆操作, 所以**commit3状态和commit1**完全一样!
+
+A little tricky, 因为如果你在C2节点进行了一些修改但是还没有提交, 然后你执行**reset --hard HEAD**, 你将完全回到C2节点的基础状态
+
+可以明显看到reset比revert好用, 因为你的选择更多更自由, 你可以**reset --mixed CommitName**来rollback到对应的节点, 但是你的工作区不会改变, 然后你再对比一下, 再进行修复和更新.
+
+但是注意, 如果从远程仓库pull了代码下来, 然后使用reset之后再push, 可能会出现麻烦的冲突, 这方面还需实践一下
+
+### cherry-pick
+将选中的commit附加到当前的HEAD节点one-by-one
+![[Pasted image 20230807230939.png]]
+
+- git cherry-pick C1(cherry pick C1)
+- git cherry-pick C1 C4(cherry pick C1, C4)
+- git cheery-pick **C1..C4**(cherry pick C2, C3, C4)
+- git cheery-pick **C1^..C4**(cherry pick C1, C2, C3, C4)
+
+deal with conflicts:
+- after dealing, git add . && git cherry-pick **--continue**
+- giving up cherry-pick, git cherry-pick **--abort** (rollback)
+- giving up cherry-pick, git cherry-pick **--quit** (cannot rollback)
+
+### interactive rebase
+using when not knowing the hash value of commits.
+command: **rebase -interactive C1** or **rebase -i C1**
+- git rebase -i main也是可以的
+
+相比于**rebase存在岔路/无岔路但存在多分支时才能使用**, rebase -i是可以在**只有一条分支**的时候使用的, 会从C1开始创建一条分叉路口, 然后对其执行你选择的commits节点, **完事后把HEAD及HEAD指向的分支(如果有)一起移动到新岔路最前端**
+
+依旧有git rebase --continue
+git rebase --abort
+git rebase --skip, to skip the commit.
+
+如果你选择了n个commits, 则会创建n个新的commits
+
+一个应用:
+![[Pasted image 20230808001434.png]]
+想要把左边成为右边, 只需
+1. git rebase -i C1, 然后只选择C4这个节点
+2. git merge main(不会有任何效果, 可能因为是只有一条线, 和[[#merge a branch]]中后面相比还是不一样的)
+3. 所以要git branch -f main bugFix(必须-f, 不然就是起名了, 会报错)
+4. git checkout main
+
+### 修改最新的commit
+这个操作用在你感觉目前的commit不够新的时候使用
+- **commit --amend**可以修定最新的commit
+把下图1
+![[Pasted image 20230808003931.png]]
+变成图2
+![[Pasted image 20230808003955.png]]
+
+### git tag
+![[Pasted image 20230808004507.png]]
+如果命令中没有C1, git tag会指向HEAD指向的节点
+标签起到一个锚点的作用
+### Git Describe
+**git describe**, 描述离你最近的标签
+
+### 相对路径拓展
+main^后面的数字是用来指定parent commit的路径选择的, 不是代表上一代! main^^^^才是一直回退, main~是退一代
+![[Pasted image 20230808010018.png]]
+使用下面这条命令, 则会走另一条路!
+![[Pasted image 20230808010122.png]]
+组合起来使用:
+![[Pasted image 20230808010235.png]]
+操作符还支持链式操作, 上面的命令等价于:
+- **git checkout HEAD~\^2~2**
+
+本地仓库小游戏完结!
+
+### 远程仓库
+![[Pasted image 20230808011649.png]]
+
+远程仓库名为o, o/main是本地仓库的远程分支, 
+
+远程分支反映了远程仓库在你**最后一次与它通信时**的状态，`git fetch` 就是你与远程仓库通信的方式.
+
+`git fetch` 并不会改变你本地仓库的状态。它不会更新你的 `main` 分支，也不会修改你磁盘上的文件。
+
+### git fetch命令
+![[Pasted image 20230808012138.png]]
+
+### git pull命令
+git fetch之后, 我们可以像合并本地分支那样来合并远程分支。也就是说就是你可以执行以下命令:
+
+- `git cherry-pick o/main`
+- `git rebase o/main`
+- `git merge o/main`
+- 等等
+
+**git pull**命令整合了这个过程, **git pull = git fetch + git merge main**
+
+### git push
+![[Pasted image 20230808013254.png]]
+
+### 团队协作
+如果push的时候和远程仓库冲突很大(同事写了一堆代码), git是不允许你push的, 很显然你要先fetch到本地的远程仓库, 然后对比合并, 进行调整, 再push
+
+- 直接git push, 没有变化
+![[Pasted image 20230808013653.png]]
+
+- git fetch后, 使用git rebase, 相当于**git pull --rebase**
+![[Pasted image 20230808013826.png]]
+
+- 在git fetch之后, 使用git merge, 相当于**git pull**
+![[Pasted image 20230808014027.png]]
+
+- 有些时候, 远程仓库的main分支被锁住了无法更改, 我们又不小心更改了本地的main分支, 我们这是应该创建一个新分支然后push到远程, 同时恢复本地的main分支到和远程的main分支一样
+
+注意**git push会推送HEAD指向的分支, 而不是branch!**
+
+### git checkout -b foo o/main
+创建foo分支并取代本地的main分支跟踪远程的o/main分支
+![[Pasted image 20230808022351.png]]
+
+当HEAD在foo上时, 我们git push, 也会更新远程的main
+
+另一种设置远程追踪分支的方法就是使用：`git branch -u` 命令，执行：
+`git branch -u o/main foo`
+
+这样 `foo` 就会跟踪 `o/main` 了。如果当前就在 foo 分支上, 还可以省略 foo：
+
+`git branch -u o/main`
+
+### git push的参数
+我们可以为 push 指定参数，语法是：
+`git push <仓库名> <分支名>`
+如`git push origin main`
+
+这里的**origin应该填写仓库秘钥或者别名**
+
+### 把本地的 `foo` 分支推送到远程的 `bar` 分支
+`git push origin \<source>:\<destination>`
+
+source可以是本地的分支, 也可以是foo^这种相对路径, 也可以是个节点!
+
+destination分支要是不存在会自动创建! 
+
+### Git fetch 的参数
+- 和之前的参数相反
+
+- **git fetch origin foo**会拉取远程的foo分支
+
+相比于无参数的fetch命令只会下载远程仓库的改变, 并同步本地仓库的远程分支, 如果你加上类似的`\<source>:\<destination>`, fetch将会直接更新**本地的相应destination**分支.(注意: 然而这样不会更新source相应的本地库!)
+
+同样的, 如果本地库(destination)没有相应的分支, 那么会自动创建
+
+但是开发人员很少这么做!
+
+如果没有参数, **git fetch**会更新所有远程的变化到本地远程仓库, 好用!
+
+### 古怪的source用法
+在上面git push和git fetch的使用中, 直接把source留空不写
+- `git push origin :side` 删除远程的side分支!危险!
+- `git fetch origin :bugFix` 在本地创建bugFix分支
+
+### git pull的参数
+`git pull origin foo` 相当于：
+
+`git fetch origin foo; git merge o/foo`
+
+以及
+`git pull origin bar~1:bugFix` 相当于：
+
+`git fetch origin bar~1:bugFix; git merge bugFix`
