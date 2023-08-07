@@ -1,0 +1,9 @@
+ 数学
+## 选择题
+- ![[Pasted image 20230622010954.png]]
+	- 把N解出来然后去交集
+	- 故选C
+ - ![[Pasted image 20230622011140.png]]
+	 - 主要就是看z虚部的两倍
+	 - 先把z化简, 再几何意义可视化https://gitee.com/itas109/KeyCastOW/releases/tag/v2.0.2.5-cnhttps://gitee.com/itas109/KeyCastOW/releases/tag/v2.0.2.5-cn
+  - 

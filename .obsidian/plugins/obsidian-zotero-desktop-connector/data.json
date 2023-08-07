@@ -1,0 +1,22 @@
+{
+  "database": "Zotero",
+  "noteImportFolder": "原子笔记",
+  "pdfExportImageDPI": 120,
+  "pdfExportImageFormat": "jpg",
+  "pdfExportImageQuality": 90,
+  "citeFormats": [],
+  "exportFormats": [
+    {
+      "name": "Import \"China Standard GB/T7714-2015\"",
+      "outputPathTemplate": "原子笔记/{{title}}.md",
+      "imageOutputPathTemplate": "附件/{{citekey}}/",
+      "imageBaseNameTemplate": "image",
+      "cslStyle": "china-national-standard-gb-t-7714-2015-numeric",
+      "templatePath": "模板/zotero_simple.md"
+    }
+  ],
+  "citeSuggestTemplate": "[[{{citekey}}]]",
+  "openNoteAfterImport": true,
+  "whichNotesToOpenAfterImport": "first-imported-note",
+  "shouldConcat": true
+}

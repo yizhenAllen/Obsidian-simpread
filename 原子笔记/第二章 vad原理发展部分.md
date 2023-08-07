@@ -1,0 +1,15 @@
+- 首先写一个开篇
+- 然后先把传统算法的具体实现写了
+	- 这需要一个传统的综述，选用[[Recent Developments, Challenges,and Future Scope of Voice Activity Detection Schemes—A Review]]中的development部分
+	- 在综述中选择需要深入的传统算法，然后去找具体的细节讲解，然后转述
+	- 可能有个问题就是去看对应的论文速度太慢了
+	- 感觉这个的参考内容也不是很好
+	- 法二就是直接对着[[book_Voice Activity Detection Fundamentals and Speech Recognition System Robustness#vad算法部分]]这本书直接转述，这里写了一些vad的基本算法，书是07年的，算法都比较传统
+	 - 传统算法和深度学习算法分别写1000出头就好了
+	 - 传统部分，总体发展先过一遍, 然后讲摘要, 1000字出头，深度学习同理，看不过来就问gpt
+	 - 重点放在所做两个实验的原理部分，尽可能多，最后如果字数真的不够，还能回头这边补一下细节算法，我觉得应该是够的
+- 然后看情况再考虑写多少深度学习的部分
+	- 神经网络的基础可以参考[[动手学深度学习]]
+	- 神经网络的部分就参考[[A HYBRID CNN-BILSTM VOICE ACTIVITY DETECTOR]]和[[Voice activity detection in the wild via weakly supervised sound event detection]]中的背景部分，然后寻找对应的文献，转述摘要
+ 
+- 然后第三章和第五章具体参考对应的文献去写

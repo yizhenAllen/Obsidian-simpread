@@ -1,0 +1,8 @@
+editor:focus-left
+editor:focus-right
+workspace:split-horizontal
+workspace:next-tab
+workspace:previous-tab
+workspace:close-window
+editor:focus
+editor:insert-callout

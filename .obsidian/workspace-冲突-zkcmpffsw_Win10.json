@@ -1,0 +1,182 @@
+{
+  "main": {
+    "id": "21183fd9b3e3d153",
+    "type": "split",
+    "children": [
+      {
+        "id": "61128d407f4baac1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b17a99c37312db5e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "原子笔记/移动第二季度交付内容说明.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b7fb0bde495b02fe",
+    "type": "split",
+    "children": [
+      {
+        "id": "9a4d1e4069d3c94a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8c870ac40ad89e7f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7a823784402defb0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "bai",
+                "matchingCase": false,
+                "explainSearch": true,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1d369905999444d0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 229.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "02e5f22f9932f9e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "e1540d156e5a86f6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ff101d5ede0f433a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "原子笔记/移动第二季度交付内容说明.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "392cf7093c8247a3",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian42-brat:BRAT": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false,
+      "omnisearch:Omnisearch": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false
+    }
+  },
+  "active": "b17a99c37312db5e",
+  "lastOpenFiles": [
+    "原子笔记/latex学习.md.nssyncsc",
+    "原子笔记/提供kaldi目前最好的测试结果, 六月底交付.md",
+    "原子笔记/移动vad项目.md",
+    "原子笔记/移动第二季度交付内容说明.md",
+    "附件/Pasted image 20230702205811.png",
+    "附件/Pasted image 20230702203919.png",
+    "附件/Pasted image 20230702203220.png",
+    "原子笔记/移动在线数据测试.md",
+    "原子笔记/SincNet框架调优.md",
+    "原子笔记/科研工作.md",
+    "@MOCs/&TASK汇总.md",
+    "原子笔记/英语学习.md",
+    "原子笔记/托福备考.md",
+    "原子笔记/曲根一万托福单词课.md",
+    "附件/Pasted image 20230630063307.png",
+    "原子笔记/karabiner使用.md",
+    "原子笔记/密码与密保.md",
+    "原子笔记/openAI的api key.md",
+    "@MOCs/&思考输出汇总.md",
+    "原子笔记/bai2019.md",
+    "pdfs for ob/bai2019-NSConflict-zkcmpffsw-mac12.5.1.pdf",
+    "SimpRead/16-win10 文件夹或文件已在另一程序中打开@annote-NSConflict-zkcmpffsw-mac12.5.1.md",
+    "SimpRead/29-part6-2  Python 类和对象（类变量和实例变量区别、property 函数定义属性及装饰器方法、隐藏和封装、继承（方法重写、未绑定方法调用）、super 函数使用、动态与__slots__、type() 定义类、metaclass 使用、多态、issubclass、isinstance、__bases__ 属性、__subclasses__() 方法、枚举类）@annote.nssyncsc",
+    "SimpRead/16-win10 文件夹或文件已在另一程序中打开@annote.md",
+    "原子笔记/test.md",
+    "附件/Pasted image 20230627030953.png",
+    "附件/Pasted image 20230627030930.png",
+    "原子笔记/做高考卷子.md",
+    "附件/bai2019.pdf",
+    "@MOCs/&月记汇总.md",
+    "@MOCs/&日记汇总.md",
+    "@MOCs/&文献笔记汇总.md",
+    "@MOCs/&数据库.md",
+    "@MOCs/&工作记录汇总.md",
+    "@MOCs/&周记汇总.md",
+    "@MOCs",
+    "原子笔记/mac的小tips.md.nssyncsc",
+    "附件/Pasted image 20230622011140.png",
+    "附件/Pasted image 20230622010954.png",
+    "附件/Pasted image 20230621164629.png",
+    "附件/Pasted image 20230621114355.png",
+    "pdfs for ob/Recent Developments, Challenges, and Future Scope of Voice Activity Detection Schemes—A Review.pdf",
+    "原子笔记/book_Robust Speech_Recognition and Understanding.md.nssyncsc",
+    "原子笔记/real-time speech transmission on the Internet (Sangwan et al., 2002).md.nssyncsc",
+    "原子笔记/reference book_Robust Speech_Recognition and Understanding.md.nssyncsc",
+    "原子笔记/本科毕业论文相关整理.md.nssyncsc"
+  ]
+}

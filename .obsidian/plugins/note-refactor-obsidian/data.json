@@ -1,0 +1,11 @@
+{
+  "includeFirstLineAsNoteHeading": false,
+  "excludeFirstLineInNote": false,
+  "headingFormat": "#",
+  "newFileLocation": 1,
+  "customFolder": "",
+  "fileNamePrefix": "",
+  "transcludeByDefault": false,
+  "noteLinkTemplate": "`",
+  "refactoredNoteTemplate": "---\nAliases: [\"#{{new_note_title}}\"]\n---\n# Dataview汇总\n\n```dataview\nlist\nfrom #{{new_note_title}}\n```\n\n# Tag Summary汇总--只对块标签生效\n\n```add-summary\ntags: #{{new_note_title}}\n```\n\n"
+}

@@ -1,0 +1,7 @@
+{
+  "useJieba": true,
+  "hmm": false,
+  "dict": "记录\n工作\n实验",
+  "moveByChineseWords": true,
+  "moveTillChinesePunctuation": true
+}

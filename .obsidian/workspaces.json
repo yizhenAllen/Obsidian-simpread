@@ -1,0 +1,189 @@
+{
+  "workspaces": {
+    "git learning": {
+      "main": {
+        "id": "21183fd9b3e3d153",
+        "type": "split",
+        "children": [
+          {
+            "id": "420f464c5c612faa",
+            "type": "tabs",
+            "dimension": 60.449735449735456,
+            "children": [
+              {
+                "id": "7228f4e844898c59",
+                "type": "leaf",
+                "state": {
+                  "type": "media-view",
+                  "state": {
+                    "info": {
+                      "host": 1,
+                      "id": "BV1vy4y1s7k6",
+                      "src": "https://www.bilibili.com/video/BV1vy4y1s7k6?p=4&vd_source=40645413612f159eb5e31f3c39bc5f84",
+                      "iframe": "https://player.bilibili.com/player.html?bvid=BV1vy4y1s7k6&page=4&high_quality=1&danmaku=0",
+                      "hash": ""
+                    },
+                    "currentTime": 0
+                  }
+                },
+                "group": "d1194bfe0663120e"
+              }
+            ]
+          },
+          {
+            "id": "58145d6b35670ce8",
+            "type": "tabs",
+            "dimension": 26.322751322751326,
+            "children": [
+              {
+                "id": "a4a09b4ae65c8293",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "原子笔记/git learning.md",
+                    "mode": "source",
+                    "backlinks": false,
+                    "source": true
+                  }
+                },
+                "group": "d1194bfe0663120e"
+              }
+            ]
+          },
+          {
+            "id": "e23b410a586a6b60",
+            "type": "tabs",
+            "dimension": 13.227513227513226,
+            "children": [
+              {
+                "id": "b5cf9d719e87fc75",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "原子笔记/git learning.md",
+                    "mode": "preview",
+                    "backlinks": false,
+                    "source": true
+                  }
+                },
+                "group": "d1194bfe0663120e"
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "b7fb0bde495b02fe",
+        "type": "split",
+        "children": [
+          {
+            "id": "9a4d1e4069d3c94a",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "8c870ac40ad89e7f",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "7a823784402defb0",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "bai",
+                    "matchingCase": false,
+                    "explainSearch": true,
+                    "collapseAll": true,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "1d369905999444d0",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 229.5,
+        "collapsed": true
+      },
+      "right": {
+        "id": "02e5f22f9932f9e3",
+        "type": "split",
+        "children": [
+          {
+            "id": "e1540d156e5a86f6",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "ff101d5ede0f433a",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "原子笔记/git learning.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "392cf7093c8247a3",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "horizontal",
+        "width": 200,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "obsidian42-brat:BRAT": false,
+          "table-editor-obsidian:Advanced Tables Toolbar": false,
+          "darlal-switcher-plus:Open in Headings Mode": false,
+          "darlal-switcher-plus:Open Symbols for the active editor": false,
+          "omnisearch:Omnisearch": false,
+          "switcher:Open quick switcher": false,
+          "graph:Open graph view": false,
+          "templates:Insert template": false,
+          "command-palette:Open command palette": false,
+          "markdown-importer:Open format converter": false,
+          "workspaces:Manage workspace layouts": false
+        }
+      },
+      "active": "a4a09b4ae65c8293"
+    }
+  },
+  "active": "git learning"
+}
